@@ -1,2 +1,2 @@
-# Treino-dice.py
+# Treino-dice
 Just Create the Dice and rollit.
