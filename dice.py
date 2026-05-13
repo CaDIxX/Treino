@@ -15,7 +15,7 @@ class Dice:
 
 
 def main() -> None:
-    apresentation = r"""
+    APRESENTATION = r"""
 +-----------------------------------------+
 |                                         |
 |                                         |
@@ -40,7 +40,7 @@ DO a Choice:
     
     while True:
         time.sleep(1)
-        print(apresentation)
+        print(APRESENTATION)
 
         try:
             choice = input("\n>>> ")
@@ -48,7 +48,7 @@ DO a Choice:
             if choice not in ("1", "2", "3"):
 
                 while True:
-                    print(apresentation)
+                    print(APRESENTATION)
                     choice = (input("\n>>> "))
 
                     if choice in ("1", "2", "3"):
@@ -80,11 +80,11 @@ DO a Choice:
                     print(f"You created a D{dice.sides}")
 
                 case 2:
-                    print("rolling.")
-                    time.sleep(1)
-                    print("rolling..")
-                    time.sleep(1)
-                    print("rolling...")
+                    awaiting = "rolling"
+                    for _ in range(3):
+                        awaiting += "."
+                        print(awaiting)
+                        time.sleep(1)
 
                     roll = dice.roll()
                     print(f"Side: {roll}.")
